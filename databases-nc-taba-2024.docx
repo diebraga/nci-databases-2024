@@ -1,0 +1,124 @@
+Name: Diego Braga
+Introduction to Databases (CIC_SEPOL23)
+
+Part A
+
+1.	Transform the conceptual design (ER diagram) into a relational model by converting the entities and relationships into their 
+appropriate tables. Show if your tables are normalized using 1st, 2nd, and 3rd normal form. 
+
+ER diagram into a relational schema:
+
+Entity Conversion:
+
+Each entity becomes a table.
+Each attribute of the entity becomes a column in the table.
+The primary key of the entity becomes the primary key of the table.
+Relationship Conversion:
+
+One-to-many relationships add the primary key of the "one" side to the "many" side as a foreign key.
+Many-to-many relationships are represented by a new table that contains the primary keys of the two entities involved as its primary key.
+Based on the ER diagram provided, we can identify the following entities and relationships:
+
+Entities:
+
+Books
+Publisher
+Member
+Relationships:
+
+Books are published by Publishers.
+Books are borrowed by Members.
+The tables created from these entities and relationships would likely look like this:
+
+Books Table:
+
+Book_ID (Primary Key)
+Title
+Author
+Price
+Availability
+ISBN
+Publisher_ID (Foreign Key)
+Publisher Table:
+
+Publisher_ID (Primary Key)
+PublisherName
+PublisherAddress
+Member Table:
+
+Memb_ID (Primary Key)
+Member_Name
+Address
+Memb_Type
+Memb_Join_Date
+Borrowed By Table:
+
+Book_ID (Foreign Key)
+Memb_ID (Foreign Key)
+Issue/Loan Date
+Due Date
+Return Date
+
+Normalization arranging the attributes of the tables to meet the criteria reducing redundancy and improve data integrity.
+
+1st Normal Form (1NF):
+
+Each table has a primary key: unique values and no part of the primary key may be null.
+No repeating groups or arrays.
+2nd Normal Form (2NF):
+
+It is in 1NF.
+All non-key attributes are fully functional dependent on the primary key (meaning the entire key is needed to identify a record).
+3rd Normal Form (3NF):
+
+It is in 2NF.
+There are no transitive functional dependencies (a non-key column should not depend on another non-key column).
+Normalization Analysis:
+
+The Books table is in 1NF because it has a primary key (Book_ID) and no repeating groups.
+It is in 2NF because all attributes depend on the primary key.
+It is in 3NF if there are no columns that are dependent on non-primary key columns, which seems to be the case.
+The same analysis would apply to the Publisher and Member tables, ensuring they follow the primary key, no 
+repeating groups, and dependency rules. The Borrowed By table would need to have a composite primary key c
+onsisting of both Book_ID and Memb_ID, ensuring it adheres to 1NF, 2NF, and 3NF.
+
+2.	Create a database called LMS and convert all the resulting logical tables from question 1 into a physical 
+database design using DDL. Choose the appropriate datatype, primary and foreign keys for the attributes.  
+Fill your table with some data of your choice (you can use Mockaroo to create the data). Provide detailed 
+assumptions for any of your design decisions. 
+
+Follow link to view .sql file:
+
+https://raw.githubusercontent.com/diebraga/nci-databases-2024/main/lms_database_setup.sql
+
+File wil also availble in the submission.
+
+3.	Using your database created in the previous step, answer the following questions using DML statements:
+
+Follow link to view .sql file:
+
+https://raw.githubusercontent.com/diebraga/nci-databases-2024/main/lms_dml_operations.sql
+
+File wil also availble in the submission.
+
+Part B
+
+4.	Discuss the pros and cons of non-relational databases by choosing one of the contexts below. Explain your answers with examples. 
+Discuss the various types of non-relational databases along with the scenarios suitable to use and avoid them.
+
+Follow link to view .pdf file:
+
+https://raw.githubusercontent.com/diebraga/nci-databases-2024/main/pros-cons-non-relational.pdf
+
+File wil also availble in the submission.
+
+5.	Discuss why Database Security matters in the context of relational database systems. State the various types of database 
+security threats and explain how it can be prevented using database security counter measures. List and explain any of the 
+five commonly used security counter measures to ensure database security.
+
+Follow link to view .pdf file:
+
+https://raw.githubusercontent.com/diebraga/nci-databases-2024/main/db-security.pdf
+
+File wil also availble in the submission.
+
