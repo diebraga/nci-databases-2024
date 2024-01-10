@@ -76,9 +76,11 @@ It is in 2NF because all attributes depend on the primary key.
 It is in 3NF if there are no columns that are dependent on non-primary key columns, which seems to be the case.
 The same analysis would apply to the Publisher and Member tables, ensuring they follow the primary key, no repeating groups, and dependency rules. The Borrowed By table would need to have a composite primary key consisting of both Book_ID and Memb_ID, ensuring it adheres to 1NF, 2NF, and 3NF.
 
+Question 2.
 
+Follow link to view .sql file:
 
+https://raw.githubusercontent.com/diebraga/nci-databases-2024/main/lms_database_setup.sql
 
-
-
+File wil also availble in the submission.
 
