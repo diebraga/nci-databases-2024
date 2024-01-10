@@ -1,3 +1,6 @@
+Name: Diego Braga
+Introduction to Databases (CIC_SEPOL23)
+
 Part A
 
 1.	Transform the conceptual design (ER diagram) into a relational model by converting the entities and relationships into their 
@@ -106,6 +109,16 @@ Discuss the various types of non-relational databases along with the scenarios s
 Follow link to view .pdf file:
 
 https://raw.githubusercontent.com/diebraga/nci-databases-2024/main/pros-cons-non-relational.pdf
+
+File wil also availble in the submission.
+
+5.	Discuss why Database Security matters in the context of relational database systems. State the various types of database 
+security threats and explain how it can be prevented using database security counter measures. List and explain any of the 
+five commonly used security counter measures to ensure database security.
+
+Follow link to view .pdf file:
+
+https://raw.githubusercontent.com/diebraga/nci-databases-2024/main/db-security.pdf
 
 File wil also availble in the submission.
 
